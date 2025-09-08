@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración</title>
+  <!-- Agregar los enlaces a los archivos CSS de Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Estilos personalizados */
+    body {
+      background-color: #343a40;
+      color: #fff;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .table {
+      color: #fff;
+    }
+    .btn {
+      color: #fff;
+    }
+    /* Estilos de Bootstrap */
+    .bg-dark {
+      background-color: #343a40 !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Panel de Administración</h1>
+    <table class="table table-dark">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Descripción</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Aquí se mostrarán los datos de la tabla -->
+      </tbody>
+    </table>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearModal">
+      Agregar
+    </button>
+
+    <!-- Modal para crear o editar elemento -->
+    <div class="modal fade" id="crearModal" tabindex="-1" role="dialog" aria-labelledby="crearModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="crearModalLabel">Agregar Elemento</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- Formulario para agregar o editar elemento -->
+            <form id="formulario">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="descripcion">Descripción</label>
+                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="guardarCambios">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agregar los enlaces a los archivos JavaScript de Bootstrap y jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    // Código JavaScript personalizado para manipular los datos y las interacciones
+
+    // Función para agregar o editar elemento
+    function guardarCambios() {
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const descripcion = document.getElementById('descripcion').value;
+
+      // Aquí puedes realizar las operaciones de guardar o actualizar los datos en el backend
+
+      // Cerrar el modal y limpiar el formulario
+      $('#crearModal').modal('hide');
+      $('#formulario')[0].reset();
+    }
+
+    // Evento para mostrar el modal al hacer clic en el botón de agregar
+    document.getElementById('guardarCambios').addEventListener('click', guardarCambios);
+  </script>
+</body>
+</html>

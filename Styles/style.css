@@ -1,0 +1,232 @@
+/*
+ * Globals
+ */
+body{
+  color: aliceblue;
+}
+
+
+/*
+ * Base structure
+ */
+.banner-image{
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgb(2, 2, 5)),url('../Images/banner-image1.jpg');
+    background-size: cover;
+}
+
+
+#portfolio, #blog {
+  /* background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)) no-repeat center center fixed; */
+  background-color: rgb(2, 2, 5);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Header
+ */
+ .navbar{
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 40px rgba(143,69,125,255),
+              -15rem 0rem 30px rgb(62,57,170),
+              20rem 0rem 30px rgb(62,57,170)
+              ;
+  font-family: var(--bs-body-font-family);
+}
+ .nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+}
+
+.nav-masthead .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, .5);
+  transition: width 0.3s;
+}
+
+.nav-masthead .nav-link:hover::after,
+.nav-masthead .nav-link:focus::after {
+  width: 100%;
+  background-color: rgba(143, 69, 125, 1);
+  box-shadow: 0 0 5px rgba(143, 69, 125, 1),
+  0 0 25px rgba(143, 69, 125, 1),
+  0 0 50px rgba(143, 69, 125, 1),
+  0 0 100px rgba(143, 69, 125, 1);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+}
+.nav-masthead .active::after {
+  width: 100%;
+  background-color: rgba(143,69,125,255);
+}
+.navbar-bg{
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.section-padding {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+.logo {
+  width: 60px; 
+  height: auto; 
+}
+/* SECTION TITLE */
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title .line {
+    width: 60px;
+    height: 4px;
+    margin: 16px auto 24px auto;
+}
+
+.section-title p {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* TEAM */
+.team-member-content {
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  width: calc(100% - 50px);
+  transform: translateX(-50%);
+  padding: 24px;
+  transition: var(--transition);
+  opacity: 0;
+}
+
+.team-member:hover .team-member-content {
+  opacity: 1;
+  bottom: 24px;
+}
+
+
+/* IMAGE ZOOM */
+.portfolio-item .iconbox {
+  background-color: var(--c-brand);
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.portfolio-item:hover .iconbox {
+  opacity: 1;
+  top: 50%;
+}
+.image-zoom {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.image-zoom-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+}
+
+.image-zoom-wrapper img{
+  transition: var(--transition);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-height {height: 35%;}
+
+.image-zoom:hover .image-zoom-wrapper img {
+  transform: scale(1.1);
+}
+.image-with-shadow {
+  box-shadow: 7px 7px 9px rgba(255, 0, 255, 0.5);
+}
+.image-with-shadow2 {
+  box-shadow: 7px 7px 9px rgba(255, 153, 0, 0.5);
+}
+.image-with-shadow3 {
+  box-shadow: 5px 5px 7px #39ff14;
+}
+
+.neon ,.titulo{
+  color: #fff;
+  letter-spacing: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 1s;
+}
+.n-rosa,.titulo {
+  text-shadow: 0 0 5px #fe4164,
+  0 0 25px #fe4164,
+  0 0 50px #fe4164,
+  0 0 100px #fe4164;
+}
+.n-naranjan {
+  text-shadow: 0 0 5px #ff2301,
+  0 0 25px #ff2301,
+  0 0 50px #ff2301,
+  0 0 100px #ff2301;
+}
+.n-verde {
+  text-shadow: 0 0 5px #39ff14,
+  0 0 25px #39ff14,
+  0 0 50px #39ff14,
+  0 0 100px #39ff14;
+}
+.titulo{
+  font-size:8rem;
+  animation-name: float;
+  animation-duration: 5s;
+  animation-timing-function: cubic-bezier(0.4,0.1,0.6,0.9);
+  animation-iteration-count: infinite;
+}
+.btn-neon{
+  text-shadow: 0 0 5px #ff2301,
+  0 0 25px #ff2301,
+  0 0 50px #ff2301,
+  0 0 100px #ff2301;
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #f2e2fb;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+.btn-neon:hover{
+  background: #fe4164;
+  box-shadow: 0 0 10px #fe4164, 0 0 40px #fe4164, 0 0 80px #fe4164;
+}
+/*Floating*/
+
+@keyframes float{
+  0%{
+  transform: translateY(-10px);
+  }
+  50%{
+  transform: translateY(-35px);
+  }
+  100%{
+  transform: translateY(-10px);
+  }
+}

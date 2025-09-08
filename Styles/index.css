@@ -1,0 +1,28 @@
+body{
+    background-color: #000033;
+    color: dodgerblue;
+    height: 250rem;
+    margin: 0 0 0 0;
+}
+nav{
+    background-color: #3d0066;
+    text-align: center;
+    padding:1rem ;
+    
+}
+a.navigation_anchor{
+    font-family:sans-serif;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    text-shadow:rgba(200, 255, 255, 1);
+}
+/* Separar los tamaños por definicion del tamaño de la pantalla*/
+
+.navigationOption{
+    text-align: center;
+    display: inline;
+    width: 20%;
+    padding: 5%;
+    border-top: 2rem;
+}

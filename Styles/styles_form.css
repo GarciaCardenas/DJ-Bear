@@ -1,0 +1,160 @@
+body {
+    color: #ffffff;
+    margin: 0px;
+    background-color: rgb(1, 1, 2);
+    /* background-image: linear-gradient(45deg, #150d48, #13021f); */
+    background-size: 400% 400%;
+    animation: neonGlow 5s ease-in-out infinite;
+    overflow-x: hidden !important;
+}
+
+@keyframes neonGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+h1,p{
+  text-align: center;
+}
+
+form {
+    width: 70%;
+   /* max-width: 800px;*/
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 40px rgba(143, 69, 125, 255), -1px 0 30px rgb(62,57,170), 1px 0 30px rgb(62, 157, 170) !important;
+  }
+  
+fieldset {
+  text-align: center;
+  border: none;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-size: 18px;
+  /*font-weight: bold;*/
+  margin-bottom: 10px;
+  color: #fdfdff;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  /*font-weight: bold;*/
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #000000;
+  /*font-weight: bold;*/
+}
+
+select{
+  width: 100% !important;
+}
+
+button {
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #6c63ff;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#registrar, #limpiar{
+  margin: 1%;
+  width: 100%;
+}
+
+.animated-element {
+  opacity: 0;
+  transform: translateZ(-20px);
+  animation: appearAndBounce 0.5s forwards;
+}
+
+@keyframes appearAndBounce {
+  0% {
+    opacity: 0;
+    transform: translateZ(-20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateZ(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@media only screen and (min-width:1100px){
+  form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.2), 0 0 40px rgba(255, 105, 180, 0.2), 0 0 60px rgba(255, 105, 180, 0.2), 0 0 80px rgba(255, 105, 180, 0.2);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .col-l-1{
+      width: 8.33%;
+  }
+  .col-l-2{
+      width: 16.66%;
+  }
+  .col-l-3{
+      width: 25%;
+  }
+  .col-l-4{
+      width: 33.33%;
+  }
+  .col-l-5{
+      width: 41.66%;
+  }
+  .col-l-6{
+      width: 50%;
+  }
+  .col-l-7{
+      width: 58.33%;
+  }
+  .col-l-8{
+      width: 66.66%;
+  }
+  .col-l-9{
+      width: 75%;
+  }
+  .col-l-10{
+      width: 83.33%;
+  }
+  .col-l-11{
+      width: 91.66%;
+  }
+  .col-l-12{
+      width: 100%;
+  }
+}

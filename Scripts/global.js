@@ -1,0 +1,10 @@
+var currentPage = window.location.pathname.split('/').pop();
+var navLinks = document.querySelectorAll('.nav-link');
+
+for (var i = 0; i < navLinks.length; i++) {
+  var link = navLinks[i];
+
+  if (link.getAttribute('href') === currentPage) {
+    link.classList.add('active');
+  }
+}
